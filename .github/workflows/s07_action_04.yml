@@ -19,3 +19,7 @@ jobs:
 
             - name: "Rama actual"
               run: echo "Rama ${{ github.ref }}"
+
+            - name: "Crear un archivo automáticamente"
+              run: touch generado.txt
+
