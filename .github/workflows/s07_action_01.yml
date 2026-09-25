@@ -1,0 +1,30 @@
+name: s07_action_01
+
+on:
+  workflow_dispatch:
+
+jobs:
+  prueba:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+
+        version:
+          - 1.0
+          - 2.0
+          - 3.0
+
+    steps:
+      - name: Mostrar configuración
+        run: |
+          echo "Sistema: ${{ matrix.os }}"
+          echo "Version: ${{ matrix.version }}"
+
+      - name: Mostrar configuración
+        run: |
+          echo "Sistema: ${{ matrix.os }}"
+          echo "Version: ${{ matrix.version }}"

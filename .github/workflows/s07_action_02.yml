@@ -1,25 +1,26 @@
-name: s07_action_02
+name: s07_action_01
 
 on:
   workflow_dispatch:
 
 jobs:
-  prueba:
-    runs-on: ${{ matrix.os }}
 
-    strategy:
-      matrix:
-        os:
-          - ubuntu-latest
-          - windows-latest
-
-        version:
-          - 1.0
-          - 2.0
-          - 3.0
+  ubuntu:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Mostrar configuración
+      - name: Comandos Linux
         run: |
-          echo "Sistema: ${{ matrix.os }}"
-          echo "Version: ${{ matrix.version }}"
+          echo "Estoy en Linux"
+          pwd
+          ls -la
+
+  windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Comandos Windows
+        run: |
+          Write-Host "Estoy en Windows"
+          Get-Location
+          dir
