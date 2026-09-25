@@ -8,4 +8,8 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - run: echo "Mundo"
+            - name: "Run echo command"
+              run: echo "Ok"
+
+            - name: "Tiempo de ejecución"
+              run: date # echo "Hello ${{ env.MY_ENV_VAR }}"
