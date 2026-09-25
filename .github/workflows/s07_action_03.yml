@@ -14,7 +14,7 @@ jobs:
                echo "Ok"
                echo "$(date)" >> prueba.txt
 
-            - name: Desarrollo
+            - name: Se ejecuto en Desarrollo
               if: github.ref == 'refs/heads/develope'
               run: echo "Modo desarrollo"
 
