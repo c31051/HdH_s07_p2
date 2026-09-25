@@ -1,4 +1,4 @@
-name: Prueba
+name: s07_action_04
 
 on:
     workflow_dispatch:
