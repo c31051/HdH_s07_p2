@@ -1,0 +1,42 @@
+name: s07_action_05
+
+on:
+    workflow_dispatch:
+env:
+  mi_Nombre: "Romel Cardenas"
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: "Run Iniciales"
+              run: |
+                echo "Ok"
+                echo "Autor ${{ github.actor }}"
+                date
+                ls -la
+
+            - name: "Mensaje variable de entorno"
+              run: echo "Hello ${{ env.mi_Nombre }}"
+
+            - uses: actions/checkout@v4
+
+            - name: Configurar Git
+              run: |
+                git config user.name "c31051"
+                git config user.email "c31051@utp.edu.pe"
+
+            - name: "Crear un archivo automáticamente"
+              run: touch generado.txt
+
+            - name: "Agregar contenido a un archivo HTML"
+              run: echo "<p>Actualizado $(date) </p>" >> index.html
+
+            - name: Commit
+              run: |
+                git add .
+                git commit -m "Actualizacion automatica"
+
+            - name: Push
+              run: git push origin main

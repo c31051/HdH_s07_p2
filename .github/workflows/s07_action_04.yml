@@ -42,4 +42,4 @@ jobs:
 
             - name: Push
               run: |
-                git push origin develope
+                git push origin main

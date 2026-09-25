@@ -1,0 +1,15 @@
+name: s07_action_06
+
+on:
+    push:
+env:
+  mi_Nombre: "Romel Cardenas Javier"
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+
+            - name: "Mensaje variable de entorno"
+              run: echo "Hello ${{ env.mi_Nombre }}"
