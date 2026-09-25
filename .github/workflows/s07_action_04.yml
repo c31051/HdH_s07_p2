@@ -13,3 +13,6 @@ jobs:
 
             - name: "Tiempo de ejecución"
               run: date # echo "Hello ${{ env.MY_ENV_VAR }}"
+
+            - name: "Contenido"
+              run: ls -la
