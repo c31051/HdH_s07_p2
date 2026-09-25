@@ -33,5 +33,5 @@ jobs:
               run: |
                   for archivo in *.html
                   do
-                    echo $archivo
+                    echo ${{archivo}}
                   done
