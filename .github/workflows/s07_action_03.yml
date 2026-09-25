@@ -21,3 +21,10 @@ jobs:
             - name: Se ejecuto en Main
               if: github.ref == 'refs/heads/main'
               run: echo "Modo Main"
+
+            - name: Mis for
+              run: |
+                  for i in 1 2 3 4 5
+                  do
+                    echo "Numero $i"
+                  done
