@@ -8,23 +8,17 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: "Run echo command"
-              run: echo "Ok"
-
-            - name: "Tiempo de ejecución"
-              run: date # echo "Hello ${{ env.MY_ENV_VAR }}"
-
-            - name: "Contenido"
-              run: ls -la
-
-            - name: "Rama actual"
-              run: echo "Rama ${{ github.ref }}"
 
             - uses: actions/checkout@v4
             - name: Configurar Git
               run: |
                 git config user.name "github-actions[bot]"
                 git config user.email "github-actions[bot]@users.noreply.github.com"
+
+            - name: Inicio
+              run: |
+                sleep 10
+                echo "Ok"
 
             - name: "Crear un archivo automáticamente"
               run: touch generado.txt

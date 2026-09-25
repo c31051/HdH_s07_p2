@@ -3,7 +3,7 @@ name: s07_action_07
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 7 * * *'
 
 env:
   mi_Empresa: "UTP"
@@ -14,5 +14,8 @@ jobs:
 
         steps:
 
-            - name: "Mensaje empresa"
-              run: echo "Hello ${{ env.mi_Empresa }}"
+          - name: Fecha
+            run: date
+
+          - name: Mensaje empresa
+            run: echo "Hello ${{ env.mi_Empresa }}"
