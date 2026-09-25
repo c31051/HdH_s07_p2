@@ -22,14 +22,14 @@ jobs:
               if: github.ref == 'refs/heads/main'
               run: echo "Modo Main"
 
-            - name: Mis for
+            - name: Mi for
               run: |
                   for i in 1 2 3 4 5
                   do
                     echo "Numero $i"
                   done
 
-            - name: Mis for html
+            - name: Mi for html
               run: |
                   for archivo in *.html
                   do
