@@ -1,0 +1,17 @@
+name: Commit Test
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v4
+        - run: sleep 300
+        - run: echo "$(date)" >> prueba.txt
+        - run: |
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+        - run: |
+            git add prueba.txt
+            git commit -m "Commit automatico"
+        - run: git push origin develop
