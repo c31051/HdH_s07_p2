@@ -6,7 +6,7 @@ env:
   mi_Nombre: "Romel Cardenas Javier"
 
 jobs:
-    test:
+    mensaje:
         runs-on: ubuntu-latest
 
         steps:
