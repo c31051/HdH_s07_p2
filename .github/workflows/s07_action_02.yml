@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-        - run: sleep 200
+        - run: sleep 20
         - run: echo "$(date)" >> prueba.txt
