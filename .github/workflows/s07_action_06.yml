@@ -1,7 +1,9 @@
 name: s07_action_06
 
 on:
-    push:
+  push:
+    branches: ["main"]
+
 env:
   mi_Nombre: "Romel Cardenas Javier"
 

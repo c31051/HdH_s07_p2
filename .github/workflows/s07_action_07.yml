@@ -1,0 +1,17 @@
+name: s07_action_07
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'
+
+env:
+  mi_Empresa: "UTP"
+
+jobs:
+    mensaje:
+        runs-on: ubuntu-latest
+
+        steps:
+
+            - name: "Mensaje empresa"
+              run: echo "Hello ${{ env.mi_Empresa }}"
