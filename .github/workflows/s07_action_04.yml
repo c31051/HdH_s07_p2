@@ -23,3 +23,8 @@ jobs:
             - name: "Crear un archivo automáticamente"
               run: touch generado.txt
 
+            - name: "Agregar contenido a un archivo HTML"
+              run: echo "<p>Actualizado</p>" >> index.html
+
+            - name: "Agregar fecha de modificación al HTML"
+              run: echo "<!-- $(date) -->" >> index.html
