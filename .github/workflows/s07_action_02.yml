@@ -4,9 +4,22 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  prueba:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+
+        version:
+          - 1.0
+          - 2.0
+          - 3.0
 
     steps:
-        - run: sleep 20
-        - run: echo "$(date)" >> prueba.txt
+      - name: Mostrar configuración
+        run: |
+          echo "Sistema: ${{ matrix.os }}"
+          echo "Version: ${{ matrix.version }}"
