@@ -1,4 +1,4 @@
-name: s07_action_01
+name: s07_action_02
 
 on:
   workflow_dispatch:
