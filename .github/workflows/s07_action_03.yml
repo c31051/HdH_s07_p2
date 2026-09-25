@@ -31,7 +31,7 @@ jobs:
 
             - name: Mi for html
               run: |
-                  for archivo in *.html
+                  for archivo in $(find . -name "*.html")
                   do
                     echo "$archivo"
                   done
