@@ -38,7 +38,7 @@ jobs:
             - name: Commit
               run: |
                 git add .
-                git commit -m "Actualizacion automatica"
+                git commit -m "Actualizacion auto"
 
             - name: Push
               run: |
