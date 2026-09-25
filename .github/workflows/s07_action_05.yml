@@ -10,19 +10,18 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: "Run echo command"
+            - name: "Run Iniciales"
               run: |
                 echo "Ok"
+                echo "Autor ${{ github.actor }}"
                 date
                 ls -la
 
-            - name: "Tiempo de ejecución"
+            - name: "Mensaje variable de entorno"
               run: echo "Hello ${{ env.mi_Nombre }}"
 
-            - name: "Rama actual"
-              run: echo "Autor ${{ github.actor }}"
-
             - uses: actions/checkout@v4
+
             - name: Configurar Git
               run: |
                 git config user.name "c31051"
