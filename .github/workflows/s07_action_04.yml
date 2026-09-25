@@ -28,3 +28,12 @@ jobs:
 
             - name: "Agregar fecha de modificación al HTML"
               run: echo "<!-- $(date) -->" >> index.html
+
+            - name: Commit
+              run: |
+                git add .
+                git commit -m "Actualizacion automatica"
+
+            - name: Push
+              run: |
+                git push origin develop
