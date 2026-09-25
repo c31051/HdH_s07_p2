@@ -28,3 +28,10 @@ jobs:
                   do
                     echo "Numero $i"
                   done
+
+            - name: Mis for html
+              run: |
+                  for archivo in *.html
+                  do
+                    echo "Archivo: $archivo"
+                  done
