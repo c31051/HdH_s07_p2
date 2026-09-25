@@ -4,18 +4,20 @@ on:
     workflow_dispatch:
 
 jobs:
-    Arrancar:
+    Mi_primer_job:
         runs-on: ubuntu-latest
 
         steps:
-            - run: sleep 10
-            - run: echo "Ok"
-            - run: echo "$(date)" >> prueba.txt
+            - name: Inicio
+              run: |
+               sleep 10
+               echo "Ok"
+               echo "$(date)" >> prueba.txt
 
             - name: Desarrollo
               if: github.ref == 'refs/heads/develope'
               run: echo "Modo desarrollo"
 
-            - name: Main
+            - name: Se ejecuto en Main
               if: github.ref == 'refs/heads/main'
               run: echo "Modo Main"
