@@ -1,0 +1,12 @@
+name: s07_action_02
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+        - run: sleep 200
+        - run: echo "$(date)" >> prueba.txt
