@@ -1,0 +1,28 @@
+name: s07_action_08
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  mensaje:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: echo "$(date)" >> cron.txt
+
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - run: |
+          git add cron.txt
+          git commit -m "cron" || exit 0
+
+      - run: git push

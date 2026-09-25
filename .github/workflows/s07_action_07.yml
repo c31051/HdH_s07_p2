@@ -2,8 +2,6 @@ name: s07_action_07
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '1 12 * * *'
 
 env:
   mi_Empresa: "UTP"
